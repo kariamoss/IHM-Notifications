@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.common_ic_googleplayservices)
+                        .setSmallIcon(R.drawable.ic_announcement_white_24dp)
                         .setContentTitle("My notification")
                         .setContentText("Hello World!")
                         .setAutoCancel(true)

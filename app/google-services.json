@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "23442488129",
-    "firebase_url": "https://test-notifs-cee44.firebaseio.com",
-    "project_id": "test-notifs-cee44",
-    "storage_bucket": "test-notifs-cee44.appspot.com"
+    "project_number": "501041330393",
+    "firebase_url": "https://ihm-notifications.firebaseio.com",
+    "project_id": "ihm-notifications",
+    "storage_bucket": "ihm-notifications.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:23442488129:android:dc5ec3ef30908509",
+        "mobilesdk_app_id": "1:501041330393:android:dc5ec3ef30908509",
         "android_client_info": {
           "package_name": "com.example.android.test_notifications"
         }
       },
       "oauth_client": [
         {
-          "client_id": "23442488129-hken10jvnj3vejq1ngp5heiqloslnejs.apps.googleusercontent.com",
+          "client_id": "501041330393-ki0lnbec2it8jd1lcvofrmv3e06jbdua.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBbwSI3SY4G8VnhFC0mm0KgPvG9XFd2RgU"
+          "current_key": "AIzaSyDhZlM-3yZ3ufPOlqgcUuV6e_yRaUK68ps"
         }
       ],
       "services": {
