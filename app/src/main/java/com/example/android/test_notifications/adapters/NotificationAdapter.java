@@ -15,6 +15,7 @@ import com.example.android.test_notifications.models.Notification;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Jehan on 05/04/2017.
@@ -76,14 +77,14 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
             title.setText(articleModel.getTitle());
             category.setText(articleModel.getCategory());
 
-            SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM HH:mm");
+            /*SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM HH:mm", Locale.FRANCE);
             String time = "";
             try {
                 time = myFormat.format(articleModel.getDateFormat().parse(articleModel.getDate()));
             } catch (ParseException e) {
                 e.printStackTrace();
-            }
-            date.setText(time);
+            }*/
+            date.setText(articleModel.getDate());
             content.setText(articleModel.getContent());
             if(articleModel.getPhotoUrl() != null){
                 new AsyncTaskLoadImage(imageView, progressBar).execute(articleModel.getPhotoUrl());

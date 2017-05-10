@@ -31,10 +31,12 @@ public class AllNotifications extends Fragment {
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mMessageDatabaseReference;
     private ChildEventListener mChildEventListener;
+    private NotificationAdapter mNotificationAdapter;
 
     public AllNotifications() {
         mNotificationList = new ArrayList<>();
         layoutManager = new LinearLayoutManager(this.getContext());
+        mNotificationAdapter = new NotificationAdapter(mNotificationList);
     }
 
     /**
@@ -59,7 +61,7 @@ public class AllNotifications extends Fragment {
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                     Notification notification = dataSnapshot.getValue(Notification.class);
                     mNotificationList.add(notification);
-
+                    mNotificationAdapter.notifyItemInserted(mNotificationList.size() -1);
                 }
                 public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
                 public void onChildRemoved(DataSnapshot dataSnapshot) {}
@@ -81,6 +83,6 @@ public class AllNotifications extends Fragment {
         super.onActivityCreated(bundle);
         RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.section_recycler_label);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new NotificationAdapter(mNotificationList));
+        recyclerView.setAdapter(mNotificationAdapter);
     }
 }
