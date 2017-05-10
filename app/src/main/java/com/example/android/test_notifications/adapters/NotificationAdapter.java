@@ -70,7 +70,6 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
             content = (TextView) itemView.findViewById(R.id.content);
             imageView = (ImageView) itemView.findViewById(R.id.thumbnail);
             progressBar = (ProgressBar) itemView.findViewById(R.id.pb_loading_indicator);
-            imageVideo = (ImageView) itemView.findViewById(R.id.logoVideo);
         }
 
         void bind(Notification articleModel){
@@ -87,8 +86,8 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
             date.setText(articleModel.getDate());
             content.setText(articleModel.getContent());
             if(articleModel.getPhotoUrl() != null){
+                imageView.setVisibility(View.VISIBLE);
                 new AsyncTaskLoadImage(imageView, progressBar).execute(articleModel.getPhotoUrl());
-                imageVideo.setVisibility(View.VISIBLE);
             }
         }
     }
