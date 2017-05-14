@@ -57,7 +57,6 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
         TextView content;
         ImageView imageView;
         ProgressBar progressBar;
-        ImageView imageVideo;
 
 
         public NewsCache(View itemView, Context context){
