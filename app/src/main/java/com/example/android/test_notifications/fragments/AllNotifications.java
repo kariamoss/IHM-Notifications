@@ -1,9 +1,7 @@
 package com.example.android.test_notifications.fragments;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,8 +22,6 @@ import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.example.android.test_notifications.R.id.fab;
 
 /**
  * Created by Jehan on 10/05/2017.
@@ -67,7 +63,7 @@ public class AllNotifications extends Fragment {
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                     Notification notification = dataSnapshot.getValue(Notification.class);
-                    mNotificationList.add(notification);
+                    mNotificationList.add(0, notification);
                     mNotificationAdapter.notifyItemInserted(mNotificationList.size() -1);
                     avLoadingIndicatorView.hide();
                 }

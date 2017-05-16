@@ -38,7 +38,7 @@
         android:padding="8dp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        android:textSize="18sp" />
+        android:textSize="@dimen/title_font_size" />
 
     <TextView
         android:id="@+id/date"
