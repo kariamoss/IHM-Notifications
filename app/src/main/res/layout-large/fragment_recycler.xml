@@ -33,9 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_menu_preferences"
+        app:srcCompat="@drawable/ic_notification"
         app:layout_anchor="@id/section_recycler_label"
         app:layout_anchorGravity="bottom|right|end"
+        android:onClick="buttonClickFunction"
         app:fabSize="auto"/>
 
 </android.support.design.widget.CoordinatorLayout>

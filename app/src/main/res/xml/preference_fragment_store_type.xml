@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Catégories de magasin à suivre">
+
+        <CheckBoxPreference
+            android:key="multimedia"
+            android:title="@string/multimedia"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="housing"
+            android:title="@string/housing"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="hypermarket"
+            android:title="@string/hypermarket"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="beauty"
+            android:title="@string/beauty"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="fashion"
+            android:title="@string/fashion"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="game"
+            android:title="@string/game"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="services"
+            android:title="@string/services"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="sport"
+            android:title="@string/sport"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

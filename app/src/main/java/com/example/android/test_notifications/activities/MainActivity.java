@@ -1,6 +1,7 @@
 package com.example.android.test_notifications.activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -9,9 +10,11 @@ import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.example.android.test_notifications.R;
 import com.example.android.test_notifications.fragments.AllNotifications;
+import com.example.android.test_notifications.models.Notification;
 
 public class MainActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -34,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+    }
+
+    public void buttonClickFunction(View view) {
+        Intent myIntent = new Intent(this, NotificationPreference.class);
+        startActivity(myIntent);
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {

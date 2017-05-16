@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Cap Sophia Notif\'s</string>
+    <string name="notifications">Notifications</string>
+    <string name="store_type">Type de magasin</string>
+    <string name="store_summary">Changez les catégories de magasins pour lesquels vous recevez des notifications</string>
+    <string name="event_type">Type d\'évenements</string>
+    <string name="event_summary">Changez les types d\'évenements auxquels vous recevez des notifications</string>
+    <string name="multimedia">Multimédia</string>
+    <string name="housing">Maison</string>
+    <string name="hypermarket">Hypermarché</string>
+    <string name="beauty">Beauté et santé</string>
+    <string name="fashion">Mode</string>
+    <string name="game">Jeux</string>
+    <string name="services">Services</string>
+    <string name="sport">Sport</string>
+    <string name="shop_status">Ouverture / Fermeture de magasin</string>
+    <string name="flash_offers">Offres flash</string>
+    <string name="sales">Période de soldes</string>
+    <string name="global_events">Evènements globaux du centre</string>
+    <string name="product_news">Nouveautés produits</string>
 </resources>

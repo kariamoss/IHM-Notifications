@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:title="@string/notifications"
+        />
+    <header
+        android:fragment="com.example.android.test_notifications.fragments.PreferenceEventType"
+        android:title="@string/event_type"
+        android:summary="@string/event_summary"
+        android:icon="@drawable/ic_event"/>
+
+    <header
+        android:fragment="com.example.android.test_notifications.fragments.PreferenceStoreType"
+        android:title="@string/store_type"
+        android:summary="@string/store_summary"
+        android:icon="@drawable/ic_store"/>
+</preference-headers>
