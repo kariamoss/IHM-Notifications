@@ -14,18 +14,22 @@ public class Notification {
     private String date;
     private Category category;
     private String photoUrl;
+    private Store store;
+    private Store secondStore;
 
 
     public Notification() {
     }
 
-    public Notification(String content, String title, int category, String date, String photoUrl) {
+    public Notification(String content, String title, int category, String date, String photoUrl, Store store, Store secondStore) {
         this.content = content;
         this.title = title;
         this.date = date;
         this.dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.FRANCE);
         this.photoUrl = photoUrl;
         this.category = Category.getCategoryFromId(category);
+        this.store = store;
+        this.secondStore = secondStore;
     }
 
     public String getContent() {
@@ -40,6 +44,26 @@ public class Notification {
         return date;
     }
 
+    public String getStoreName() {
+        return store.getName();
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public Store getStore() {
+        return store;
+    }
+
+    public Store getSecondStore() {
+        return secondStore;
+    }
+
+    public String getSecondStoreName() {
+        return secondStore.getName();
+    }
+
     public SimpleDateFormat getDateFormat() {
         return dateFormat;
     }
@@ -52,7 +76,7 @@ public class Notification {
         this.photoUrl = photoUrl;
     }
 
-    public String getCategory() {
+    public String getCategoryName() {
         return category.getName();
     }
 

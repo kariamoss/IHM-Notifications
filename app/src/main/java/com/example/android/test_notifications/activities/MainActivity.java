@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.example.android.test_notifications.R;
 import com.example.android.test_notifications.fragments.AllNotifications;
+import com.example.android.test_notifications.fragments.PersonalNotifications;
 import com.example.android.test_notifications.models.Notification;
 
 public class MainActivity extends AppCompatActivity {
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 return AllNotifications.newInstanceGrid();
             }
             else{
-                return AllNotifications.newInstanceGrid();
+                return PersonalNotifications.newInstanceGrid();
             }
         }
 

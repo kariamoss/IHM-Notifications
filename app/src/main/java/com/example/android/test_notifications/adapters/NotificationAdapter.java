@@ -12,10 +12,7 @@ import android.widget.TextView;
 import com.example.android.test_notifications.R;
 import com.example.android.test_notifications.models.Notification;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Created by Jehan on 05/04/2017.
@@ -73,7 +70,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
         void bind(Notification articleModel){
             title.setText(articleModel.getTitle());
-            category.setText(articleModel.getCategory());
+            category.setText(articleModel.getCategoryName());
 
             /*SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM HH:mm", Locale.FRANCE);
             String time = "";

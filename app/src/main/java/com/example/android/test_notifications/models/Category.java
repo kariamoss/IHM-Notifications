@@ -7,8 +7,11 @@ import com.google.firebase.database.Exclude;
  */
 
 public enum Category {
-    PROMOTION(1, "Promotions"),
-    OUVERTURE(2, "Nouveau magasin");
+    shop_status(1, "Ouverture / Fermeture de magasin"),
+    flash_offers(2, "Offres flash"),
+    sales(3, "Période de soldes"),
+    global_events(4, "Evènements globaux du centre"),
+    product_news(5, "Nouveautés produits");
 
     private int id;
     private String name;
