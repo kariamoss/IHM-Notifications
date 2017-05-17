@@ -25,7 +25,7 @@ public enum  Store {
     }
 
     @Exclude
-    public static Store getCategoryFromId(int id){
+    public static Store getStoreFromId(int id){
         for(Store store: Store.values()){
             if (store.id == id){
                 return store;

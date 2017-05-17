@@ -51,7 +51,7 @@ public class AllNotifications extends Fragment {
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Init Firebase components
@@ -87,31 +87,12 @@ public class AllNotifications extends Fragment {
         super.onActivityCreated(bundle);
         RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.section_recycler_label);
         final FloatingActionButton fab = (FloatingActionButton) getView().findViewById(R.id.fab);
+        fab.setVisibility(View.INVISIBLE);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mNotificationAdapter);
 
         //Loading indicator
         avLoadingIndicatorView = (AVLoadingIndicatorView) getView().findViewById(R.id.loading_indicator);
         avLoadingIndicatorView.show();
-
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener(){
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx,int dy){
-                super.onScrolled(recyclerView, dx, dy);
-
-                if (dy >0) {
-                    // Scroll Down
-                    if (fab.isShown()) {
-                        fab.hide();
-                    }
-                }
-                else if (dy <0) {
-                    // Scroll Up
-                    if (!fab.isShown()) {
-                        fab.show();
-                    }
-                }
-            }
-        });
     }
 }

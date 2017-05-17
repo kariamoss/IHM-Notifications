@@ -21,15 +21,15 @@ public class Notification {
     public Notification() {
     }
 
-    public Notification(String content, String title, int category, String date, String photoUrl, Store store, Store secondStore) {
+    public Notification(String content, String title, int category, String date, String photoUrl, int store, int secondStore) {
         this.content = content;
         this.title = title;
         this.date = date;
         this.dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.FRANCE);
         this.photoUrl = photoUrl;
         this.category = Category.getCategoryFromId(category);
-        this.store = store;
-        this.secondStore = secondStore;
+        this.store = Store.getStoreFromId(store);
+        this.secondStore = Store.getStoreFromId(secondStore);
     }
 
     public String getContent() {

@@ -56,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             if(position == 0){
-                return AllNotifications.newInstanceGrid();
+                return PersonalNotifications.newInstanceGrid();
             }
             else{
-                return PersonalNotifications.newInstanceGrid();
+                return AllNotifications.newInstanceGrid();
             }
         }
 

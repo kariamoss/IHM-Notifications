@@ -70,7 +70,10 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
         void bind(Notification articleModel){
             title.setText(articleModel.getTitle());
-            category.setText(articleModel.getCategoryName());
+            String categoryS = articleModel.getCategoryName();
+            if(articleModel.getStore() != null) categoryS += articleModel.getStore();
+            if(articleModel.getSecondStore() != null) categoryS += "&" + articleModel.getSecondStore();
+            category.setText(categoryS);
 
             /*SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM HH:mm", Locale.FRANCE);
             String time = "";
