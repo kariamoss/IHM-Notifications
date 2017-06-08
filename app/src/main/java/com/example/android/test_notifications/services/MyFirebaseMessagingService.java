@@ -1,6 +1,5 @@
 package com.example.android.test_notifications.services;
 
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -17,7 +16,7 @@ import static android.app.Notification.DEFAULT_VIBRATE;
 import static android.content.ContentValues.TAG;
 
 /**
- * Created by Jehan on 14/05/2017.
+ * We usually don't have to interact with notifications but if the app is open, this class will trigger
  */
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {

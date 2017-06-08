@@ -1,14 +1,8 @@
 package com.example.android.test_notifications.fragments;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.ListPreference;
 import android.preference.PreferenceFragment;
-import android.util.Log;
-
 import com.example.android.test_notifications.R;
-
-import static android.content.ContentValues.TAG;
 
 
 /**

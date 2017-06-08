@@ -73,6 +73,7 @@ public class PersonalNotifications extends Fragment {
 
         if(mChildEventListener == null){
             mChildEventListener = new ChildEventListener() {
+                // Add new notifications when there is an update from Firebase database
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                     Notification notification = dataSnapshot.getValue(Notification.class);
@@ -92,11 +93,15 @@ public class PersonalNotifications extends Fragment {
         }
     }
 
+    /**
+     * Trigger when we return from preferences
+     * Update the list of events based on the new preferences set by the user
+     */
     @Override
     public void onResume(){
         ListIterator<Notification> notificationIterator = mTotalNotificationList.listIterator();
 
-        //TODO Afficher les nouvelles notifications en changeant de paramètres
+        // Add new notifications
         while (notificationIterator.hasNext()) {
             Notification notif = notificationIterator.next();
             if(notificationRequiredByUser(notif) && !mNotificationList.contains(notif)){
@@ -106,6 +111,7 @@ public class PersonalNotifications extends Fragment {
             Log.d(TAG, "For " + notif.getTitle() + "/!\\ notifRequir : " + notificationRequiredByUser(notif) + ". contains : " + mNotificationList.contains(notif));
         }
 
+        // Remove notifications no longer needed
         ListIterator<Notification> notificationListIterator = mNotificationList.listIterator();
         while (notificationListIterator.hasNext()) {
             Notification notif = notificationListIterator.next();
@@ -118,6 +124,10 @@ public class PersonalNotifications extends Fragment {
         super.onResume();
     }
 
+    /**
+     * Check if the notification can be display based on the user preferences
+     * @param notification
+     */
     private boolean notificationRequiredByUser(Notification notification) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         boolean haveCat = prefs.getBoolean(notification.getCategory().name(), false);
